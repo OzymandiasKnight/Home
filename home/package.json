@@ -1,6 +1,7 @@
 {
   "name": "home",
   "version": "0.1.0",
+  "homepage": "https://ozymandiasknight.github.io/Home",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
