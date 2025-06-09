@@ -1,6 +1,5 @@
 {
   "name": "home",
-  "homepage": "https://ozymandiasknight.github.io/Home",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
