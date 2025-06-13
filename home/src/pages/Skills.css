@@ -1,0 +1,137 @@
+
+/*
+Image to SVG Class
+*/
+.img-svg > img {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(0.0);
+}
+
+.img-svg-mask {
+    width: 50px;
+    height: 50px;
+    background-color: var(--c-primary);
+    z-index: 1;
+}
+
+.img-svg-outline {
+    opacity: 0.0;
+}
+
+/*Underlying classes*/
+
+.card {
+    width: 100px;
+    transition: 0.2s;
+    height: 100px;
+    background-color: var(--c-secondary);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.card:hover {
+    transition: 0.2s;
+    outline: solid 2px var(--c-primary);
+}
+
+.card > h4 {
+    font-size: 13px;
+    transition:  0.2s;
+    opacity: 1.0;
+    user-select: none;
+    border-radius: 5px;
+    margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.card:hover > h4 {
+    
+    outline: solid 1px var(--c-foreground);
+}
+
+.card > .code-img {
+    position: relative;
+    transition: 0.2s;
+    scale: 1;
+}
+
+
+.h1 {
+    user-select: none;
+}
+
+.gallery_panel {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(5, 250px);
+    gap: 25px;
+    justify-content: center;
+    background-color: var(--c-foreground);
+}
+
+.gallery_title {
+    color: var(--c-txt-s);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.gallery_title > .title-border {
+    border-bottom: dashed 5px var(--c-primary);
+}
+
+.gallery_code {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery_programs {
+    width: 100%;
+}
+
+.gallery_languages {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.speak_panel {
+    position: relative;
+    left: 30%;
+    justify-content: center;
+    display: flex;
+    width: 40%;
+    background-color: var(--c-foreground);
+    border-radius: 20px;
+}
+
+.language_card {
+    width: 100%;
+}
+
+.language_card > .name {
+    position: relative;
+    padding: 10px;
+    float:left;
+    
+}
+
+.language_card > .level {
+    position: relative;
+    padding: 10px;
+    
+    float: right;
+}
