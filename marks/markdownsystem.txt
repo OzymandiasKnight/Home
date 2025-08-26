@@ -1,0 +1,29 @@
+<t>Système de markdown custom</t>
+<space>
+<st>Pour écrire les blogs de mon site, j’ai créé un système de markdown personnalisé</st>
+<p>Ce système me permet de rédiger des articles qui conservent l’identité visuelle de mon site, tout en pouvant les écrire rapidement.</p>
+<space-s>
+<st>Comment fonctionne-t-il ?</st>
+<p>C’est un composant React qui prend en paramètre le chemin d’un fichier texte.</p>
+<p>Par exemple, le fichier texte de ce blog est stocké sur le GitHub du site à l’emplacement suivant :</p>
+<p>"public/marks/markdownsystem.txt"</p>
+<p>Une fois le fichier récupéré à l’aide d’un fetch, on utilise des "regex" pour détecter nos balises personnalisées (similaires à des balises HTML).</p>
+<p>Par exemple, pour créer une balise de titre (un h1), j’ai décidé de la nommer <t> pour "title".</p>
+<p>La regex de cette balise ressemble à ceci :</p>
+<code>/<t>(.*?)<\/t>/g</code>
+<p>On peut alors écrire un texte de cette façon :</p>
+<code><t>Titre</t></code>
+<p>Ce qui donne comme résultat :</p>
+<t>Titre</t>
+<p>Le système est assez flexible et permet également de gérer la mise en page.</p>
+<p>Par exemple, on peut créer une balise qui insère un espace grâce à cette regex :</p>
+<code>/<space>/g</code>
+<p>Et dans notre fichier texte :</p>
+<code><space></code>
+<p>Ce qui donne comme résultat :</p>
+<space>
+<p>Un espace, qui en réalité est un <div> transparent avec une hauteur arbitraire.</p>
+<space>
+<hr>
+<space>
+<p>Merci d’avoir lu, et j’espère avoir apporté quelques informations utiles aux développeurs débutants.</p>
