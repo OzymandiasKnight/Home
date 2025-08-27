@@ -1,0 +1,27 @@
+.img {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.img > img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    display: block;
+    user-select: none;
+}
+
+
+
+.card-content {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 8px;
+}

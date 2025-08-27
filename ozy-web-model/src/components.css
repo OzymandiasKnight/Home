@@ -1,0 +1,146 @@
+.card {
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    height: fit-content;
+    position: relative;
+}
+
+.card-solid {
+    opacity:0.9;
+    transition: 0.25s;
+}
+
+.card:hover > .card-solid {
+    opacity: 0.75;
+    transition: 0.25s;
+}
+
+.card > .card-content > .surface {
+    padding: 24px;
+    padding-bottom: 0px;
+}
+
+
+.grid {
+    position: relative;
+    width: inherit;
+    display: grid;
+    gap: 24px;
+    min-width: 270px;
+}
+
+.surface {
+    z-index: -1;
+    background-color: var(--surface);
+    border-radius: 4px;
+    padding: 4px;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+.link {
+    position: relative;
+    padding: 8px;
+}
+
+.link > a {
+    color: inherit;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    user-select: none;
+    cursor: pointer;
+}
+
+.link > a:visited {
+    color: inherit;
+    cursor: pointer;
+}
+
+.link > a > .underline {
+    position: absolute;
+    height: 4px;
+    border-radius: 2px;
+    width: 100%;
+    background-color: var(--primary);
+    overflow: hidden;
+}
+
+.link-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.underline > .anim {
+    background: linear-gradient(90deg,
+    transparent 0%, transparent 10%, var(--primary-v) 10%, var(--primary-v) 90%
+    );
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: infinite 1s linear select;
+    transition: 0.25s;
+}
+
+.underline > .anim.active {
+    animation: none;
+    background-color: var(--primary-v);
+    opacity: 1;
+}
+
+a:hover > .underline > .anim {
+    opacity: 1;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.headband {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    color: var(--txt-p);
+    background-color: var(--txt-s);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: start;
+}
+
+.headband-compact {
+    width: 100%;
+    flex-direction: row;
+    height: fit-content;
+    align-items: end;
+
+}
+
+.scroll-to-top {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    height: 32px;
+    width: 32px;
+    background-color: var(--primary-v);
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    z-index: 250;
+}
+
+.scroll-to-top:hover {
+    outline: solid var(--txt-s) 2px;
+}
+
+@keyframes select {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

@@ -1,0 +1,50 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.gallery {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 505px);
+}
+
+.project_card {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.project_card > h1 {
+    color: var(--c-txt-s)
+}
+
+.project_card > .showcase {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: inherit;
+    height: 270px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.project_card > .showcase > img {
+    border-radius: 10px;
+    outline: 2px solid var(--c-primary);
+}
+
+.project_tags {
+    display: flex;
+}
+
+.project_tags > .tag {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--c-primary);
+}

@@ -2,6 +2,7 @@ import './App.css';
 import { NavLink, Route, Routes} from 'react-router-dom';
 import Skills from './pages/Skills';
 import Home from './pages/Home';
+import Projects from './pages/Projects';
 
 
 
@@ -11,6 +12,7 @@ const Main = () => {
       <Route exact path="/Home" element={<Home />}></Route>
       <Route exact path="/about" element={<About />}></Route>
       <Route exact path="/skills" element={<Skills />}></Route>
+      <Route exact path="/projects" element={<Projects />}></Route>
     </Routes>
   );
 };
@@ -20,6 +22,7 @@ const Band = () => {
     <div className='band'>
       <NavLink to={'/Home'}><h1>Accueil</h1></NavLink>
       <NavLink to={'/skills'}><h1>Competences</h1></NavLink>
+      {/* <NavLink to={'/projects'}><h1>Competences</h1></NavLink> */}
     </div>
   );
 }

@@ -97,6 +97,8 @@ function GalleryPrograms() {
         <Program pro_id='blender' pro_name='Blender' />
         <Program pro_id='../languages/godot' pro_name='Godot' />
         <Program pro_id='gimp' pro_name='GIMP' />
+        <Program pro_id='inkscape' pro_name='Inkscape'/>
+        <Program pro_id='mysql' pro_name='SQL'/>
       </div>
     </div>
   )
@@ -121,7 +123,7 @@ function GallerySpeak() {
         <div>
         <SpeakLang lang_name="Français" level="C2"/>
         <SpeakLang lang_name="Polonais" level="C2"/>
-        <SpeakLang lang_name="Englais" level="C1"/>
+        <SpeakLang lang_name="Anglais" level="C1"/>
         <SpeakLang lang_name="Espagnol" level="B1-B2"/>
         <SpeakLang lang_name="Japonais" level="A1"/>
         </div>
