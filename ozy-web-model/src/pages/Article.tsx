@@ -3,7 +3,7 @@ import MarkReader from "../components/MarkReader.tsx";
 
 function ArticlePage() {
     const { slug } = useParams<{slug:string}>();
-    const link:string = `public/marks/${slug}.txt`;
+    const link:string = `marks/${slug}.txt`;
 
 
     return (

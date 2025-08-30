@@ -11,10 +11,9 @@ function NavBar({ is_compact, is_mobile}:{is_compact:boolean, is_mobile:boolean}
                 
                 <Link link="/">
                     {!is_compact && <Icon img_url="/icons/home.svg"
-                    style={{ width: "32px", height: "32px", zIndex: 150}}background_color='var(--primary)'/>}
+                    style={{ width: "32px", height: "32px", zIndex: 150, top:'4px', position:'relative'}}background_color='var(--primary)'/>}
                     <div style={{top:'4px', position:'relative'}}>
                         {(is_mobile) ? <h2>Nikiel</h2> : <h2>Nikiel Patrick</h2>}
-                        
                     </div>
                 </Link>
                 </div>

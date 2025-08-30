@@ -1,6 +1,9 @@
+import React from 'react';
 import { useEffect, useState } from 'react'
+import '../components.css'
 import '../App.css'
 import NotFoundPage from '../pages/NotFound';
+import LoadingScreen from './Loading';
 
 function make_bloc(content: String, key:number) {
   const lines = content.split('\n').slice(1, -1);
@@ -21,9 +24,10 @@ function parsePageFromMarks() {
   function parseMarks(text: string): React.ReactNode[] {
     const elements: React.ReactNode[] = []
   
+    const markRegex = /<markdown>/g
     const tRegex = /<t>(.*?)<\/t>/g
     const stRegex = /<st>(.*?)<\/st>/g
-    const pRegex = /<p>(.*?)<\/p>/g
+    const pRegex = /<p>(.*?)<\/p>/gs
     const codeRegex = /<code>(.*?)<\/code>/gs
     const blocRegex = /<bloc>(.*?)<\/bloc>/gs
     const showcaseRegex = /<showcase img=([^\s>]+)>/g
@@ -60,7 +64,12 @@ function parsePageFromMarks() {
       return result
     }
   
-    
+    if (markRegex.test(text)) {
+      markRegex.lastIndex = 0
+      return replaceAndParse(markRegex, () => {
+        return <div className="markdown" key={key++}></div>
+      })
+    }
     if (blocRegex.test(text)) {
       blocRegex.lastIndex = 0
       return replaceAndParse(blocRegex, match => (
@@ -124,18 +133,33 @@ function parsePageFromMarks() {
 function Reader({ txt_path = 'Home/marks/self.txt' }) {
   const [content, setContent] = useState<React.ReactNode[]>([])
 
+  console.log(content)
+
   useEffect(() => {
     fetch(txt_path)
       .then(res => res.text())
       .then(txt => setContent(parsePageFromMarks()(txt)))
   }, [])
 
-  return (
-    <div className='mark-reader'>
+  let valid:boolean = (content.length > 1)
+  let loading:boolean = (content.length === 0)
+  const mark_valid:React.ReactNode = content[0]
+  if (React.isValidElement(mark_valid)) {
+    if (mark_valid.type === "div") {
+      valid = true;
+    }
+    else {
+      valid = false;
+    }
+  }
+  else {
+    valid = false;
+  }
 
-        {content.length !== 1 ? content :
-        <NotFoundPage></NotFoundPage>
-        }
+  return (
+    <div className={'mark-reader' + (loading ? '' : ' fade-in')}>
+        {!loading ? (valid ? content :
+        <NotFoundPage></NotFoundPage>) : <LoadingScreen></LoadingScreen>}
     </div>
   );
 }

@@ -8,12 +8,17 @@ interface CardProps {
     title: string;
     description: string;
     image: string;
+    link: string;
 }
 
-function Card({ card_width, card_height, title, description, image}: CardProps) {
+function Card({ card_width, card_height, title, description, image, link }: CardProps) {
+
+    function go_to_link() {
+        window.location.href = link;
+    }
 
     return (
-        <div className="card" style={{ width: card_width, height: card_height }}>
+        <div className="card" style={{ width: card_width, height: card_height }} onClick={go_to_link}>
             <Image src={image} alt="Card Image" style={{ height: '100%'}} />
             <div className="card-solid" style={{
                 backgroundColor: 'var(--primary)',

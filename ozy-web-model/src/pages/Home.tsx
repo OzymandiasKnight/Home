@@ -79,11 +79,13 @@ function HomePage({is_mobile}: {is_mobile: boolean}) {
         <div style={{display:'flex', justifyContent:'center', alignItems:'center',flexDirection:'column', minWidth:'320px', width:'100%', maxWidth:'900px'}}>
             <div style={{minWidth:'320px', overflowWrap:'break-word'}}>
                 <h1>Patrick Nikiel</h1>
-                <h2>En recherche d'alternance dans</h2>
-                <h2>le développement web ou cybersécurité</h2>
+                <div className="space-s"></div>
+                <h2>En recherche d'alternance dans l'informatique</h2>
+                <h2>De préférence dans le développement web ou la cybersécurité</h2>
+                <div className="space-s"></div>
                 <p>Je suis un développeur passionné,</p>
                 <p>une alternance me permettrais de faire un premier pas dans</p>
-                <p>l'enseignement supérieur et le monde du travail</p>
+                <p>l'enseignement supérieur et dans le monde du travail</p>
             </div>
             <div className="space"></div>
             <div className="rule-h"></div>

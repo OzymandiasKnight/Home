@@ -37,11 +37,39 @@ html {
 }
 
 .mark-reader {
-  width: fit-content;
+  width: 100%;
 }
 
 .mark-reader > * {
   width: 100%;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.smooth-hide {
+  opacity: 0;
+  pointer-events: none;
+  cursor: none;
+}
+
+.smooth-show {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: auto;
+}
+
+.smooth-focus {
+  scale: 1.0;
+}
+
+.smooth-unfocus {
+  scale: 0.75;
+}
+
+.fade-out {
+  animation: fadeIn 0.5s ease-in-out reverse forwards;
 }
 
 body {
@@ -137,4 +165,9 @@ h1, h2, p {
   padding: 4px;
   border: solid 2px var(--secondary);
   width: 100%;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }

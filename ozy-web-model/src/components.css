@@ -130,10 +130,35 @@ a:hover > .underline > .anim {
     border-radius: 50%;
     padding: 0;
     z-index: 250;
+    transition: 0.2s;
+    cursor: pointer;
 }
 
 .scroll-to-top:hover {
     outline: solid var(--txt-s) 2px;
+}
+
+
+.loading-circle {
+    width: 160px;
+    height: 160px;
+    mask-composite: exclude;
+}
+
+.loading-circle > .round {
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: inherit;
+}
+
+@keyframes loading {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
 }
 
 @keyframes select {
