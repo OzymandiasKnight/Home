@@ -34,6 +34,7 @@ function parsePageFromMarks() {
     const spaceRegex = /<space>/g
     const spaceSRegex = /<space-s>/g
     const hrRegex = /<hr>/g
+    const bpRegex = /<bp>(.*?)<\/bp>/g
 
     function replaceAndParse(regex: RegExp, render: (match: RegExpExecArray) => React.ReactNode) {
       let rgx_match: RegExpExecArray | null
@@ -114,6 +115,15 @@ function parsePageFromMarks() {
       spaceSRegex.lastIndex = 0
       return replaceAndParse(spaceSRegex, () => (
         <div className="space-s" key={key++}></div>
+      ))
+    }
+    if (bpRegex.test(text)) {
+      bpRegex.lastIndex = 0
+      return replaceAndParse(bpRegex, match => (
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="bulletpoint" key={key++}></div>
+          <p>{match[1]}</p>
+        </div>
       ))
     }
   

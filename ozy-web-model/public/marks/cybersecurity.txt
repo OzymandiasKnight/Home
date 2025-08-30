@@ -18,9 +18,9 @@ C’est ainsi que j’ai découvert mon tout premier CTF :
 Ce concours proposait de nombreux challenges,
 mais certains m’ont particulièrement marqué et appris de nouvelles compétences, notamment :
 </p>
-<p> –Utiliser le module socket en Python</p>
-<p> –Manipuler Wireshark pour analyser une trame réseau et y repérer des informations sensibles</p>
-<p> –Exploiter les métadonnées d’un fichier pour localiser un lieu</p>
+<bp>Utiliser le module socket en Python</bp>
+<bp>Manipuler Wireshark pour analyser une trame réseau et y repérer des informations sensibles</bp>
+<bp>Exploiter les métadonnées d’un fichier pour localiser un lieu</bp>
 <space-s>
 <p>Bien que je n’aurais pas pu résoudre tous les challenges seul, j’ai eu la chance de travailler avec une équipe soudée.</p>
 <p>
@@ -38,10 +38,10 @@ L’Oteria Cyber Cup est un CTF entièrement axé sur l’OSINT (Open Source Int
 une discipline de la cybersécurité qui regroupe plusieurs branches.
 Lors de cette édition, nous avons travaillé sur :
 </p>
-<p>– SOCMINT (Social Media Intelligence) : exploitation des réseaux sociaux</p>
-<p>– WEBINT (Web Intelligence) : analyse de contenus web</p>
-<p>– IMINT (Imagery Intelligence) : identification de lieux ou d’indices à partir d’images</p>
-<p>– CYBINT (Cyber Intelligence) : détection de menaces et recherche de vulnérabilités sur des sites</p>
+<bp>SOCMINT (Social Media Intelligence) : exploitation des réseaux sociaux</bp>
+<bp>WEBINT (Web Intelligence) : analyse de contenus web</bp>
+<bp>IMINT (Imagery Intelligence) : identification de lieux ou d’indices à partir d’images</bp>
+<bp>CYBINT (Cyber Intelligence) : détection de menaces et recherche de vulnérabilités sur des sites</bp>
 <space-s>
 <p>
 La plupart des équipes étaient composées d’étudiants du supérieur,
@@ -71,6 +71,7 @@ Cette épreuve a été un vrai défi, mais aussi une excellente expérience.
 <st>Passe Ton Hack d’Abord 2025</st>
 
 <space-s>
+<bp>Examen d'entrée au GIC</bp>
 <p>
 L’un des premiers défis de cette édition était un petit exercice de cryptographie,
 servant d’ "examen d’entrée" au Groupe d’Intervention Cyber.
@@ -78,6 +79,7 @@ Il s’agissait simplement de décrypter un message codé en ROT13
 (une variante du code César qui décale l’alphabet de 13 lettres au lieu de 3).
 Un bon moyen de se mettre en jambes avant les choses sérieuses.
 </p>
+<bp>Brookie Clicker</bp>
 <p>
 Un autre challenge marquant reprenait le principe d’un Cookie Clicker,
 mais développé avec Godot (un moteur de jeu que j’apprécie particulièrement),
@@ -86,6 +88,7 @@ Comme le titre le suggérait, la solution consistait à fouiller dans les cookie
 (ces données stockées localement par un site) pour modifier la valeur de la monnaie virtuelle du jeu.  
 Une fois la ressource gonflée artificiellement, le mot de passe apparaissait.
 </p>
+<bp>Cycle Cpu</bp>
 <p>
 Un troisième challenge demandait de récupérer depuis un site une série de « tâches »,
 similaires à des processus informatiques,

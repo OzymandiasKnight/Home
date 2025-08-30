@@ -134,6 +134,14 @@ a:hover > .underline > .anim {
     cursor: pointer;
 }
 
+.bulletpoint {
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-color: var(--secondary-v);
+}
+
 .scroll-to-top:hover {
     outline: solid var(--txt-s) 2px;
 }
