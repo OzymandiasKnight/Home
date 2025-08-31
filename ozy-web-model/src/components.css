@@ -160,6 +160,15 @@ a:hover > .underline > .anim {
     background-color: inherit;
 }
 
+.progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    background-color: var(--primary-v);
+    z-index: 1000;
+}
+
 @keyframes loading {
     0% {
         rotate: 0deg;

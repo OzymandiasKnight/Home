@@ -88,7 +88,7 @@ Comme le titre le suggérait, la solution consistait à fouiller dans les cookie
 (ces données stockées localement par un site) pour modifier la valeur de la monnaie virtuelle du jeu.  
 Une fois la ressource gonflée artificiellement, le mot de passe apparaissait.
 </p>
-<bp>Cycle Cpu</bp>
+<bp>Cycle CPU</bp>
 <p>
 Un troisième challenge demandait de récupérer depuis un site une série de « tâches »,
 similaires à des processus informatiques,

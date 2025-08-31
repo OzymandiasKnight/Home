@@ -11,7 +11,6 @@ function ImgToSvg({img_url, style, background_color}: ImgProps) {
       const publicUrl = import.meta.env.VITE_PUBLIC_URL || '';
       return `${prefix}${publicUrl}/${relative_path}`;
   }
-  console.log(make_path(img_url));
   return (
     <div style={style}>
         <div style={{

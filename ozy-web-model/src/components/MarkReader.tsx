@@ -64,7 +64,7 @@ function parsePageFromMarks() {
       }
       return result
     }
-  
+
     if (markRegex.test(text)) {
       markRegex.lastIndex = 0
       return replaceAndParse(markRegex, () => {
@@ -91,7 +91,19 @@ function parsePageFromMarks() {
     }
     if (pRegex.test(text)) {
       pRegex.lastIndex = 0
-      return replaceAndParse(pRegex, match => <p key={key++}>{match[1]}</p>)
+      return replaceAndParse(pRegex, match => {
+        let content = match[1].replace(/<nbsp>/g, "\u00A0")
+        let nbsp_chars:string[] =[" :", " .", " ?", " ;"]
+        for (var i = 0; i < nbsp_chars.length; i++) {
+          if (nbsp_chars[i].length > 1) {
+            content = content.replace(nbsp_chars[i],nbsp_chars[i].replace(" ", "\u00A0"))
+          }
+          else {
+            content = content.replace(nbsp_chars[i], "\u00A0" + nbsp_chars[i])
+          }
+        }
+        return <p key={key++}>{content}</p>
+      });
     }
     if (showcaseRegex.test(text)) {
       showcaseRegex.lastIndex = 0
@@ -142,14 +154,17 @@ function parsePageFromMarks() {
 
 function Reader({ txt_path = 'Home/marks/self.txt' }) {
   const [content, setContent] = useState<React.ReactNode[]>([])
-
-  console.log(content)
+ 
 
   useEffect(() => {
     fetch(txt_path)
       .then(res => res.text())
       .then(txt => setContent(parsePageFromMarks()(txt)))
   }, [])
+
+
+  
+
 
   let valid:boolean = (content.length > 1)
   let loading:boolean = (content.length === 0)
@@ -165,6 +180,7 @@ function Reader({ txt_path = 'Home/marks/self.txt' }) {
   else {
     valid = false;
   }
+
 
   return (
     <div className={'mark-reader' + (loading ? '' : ' fade-in')}>
