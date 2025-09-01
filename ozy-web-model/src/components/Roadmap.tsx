@@ -15,9 +15,8 @@ function make_roadmap(props: RoadMapProps) {
   let flip:number = 0;
   roadmap.push(<div key={-2} style={{justifyContent:'center', display:'flex'}}>
     <Icon img_url="icons/roadcenter.svg"
-    style={{ height:props.lineHeight, width:doubleHeight, maskImage: 'linear-gradient(180deg, transparent 20% ,black 80%)'}} background_color='var(--primary-v)'/>
+    style={{ height:props.lineHeight, width:doubleHeight, maskImage: 'linear-gradient(180deg, transparent 20% ,black 80%)'}} background='var(--primary-v)'/>
   </div>)
-console.log(roadmap.length)
 
   props.list.forEach((item,idx) => {
     flip += 1;
@@ -32,11 +31,11 @@ console.log(roadmap.length)
 
             <Icon img_url="icons/roadturn.svg"
             style={{width: props.lineHeight, height: props.lineHeight,
-            rotate: String((flip+1)*90)+'deg'}} background_color='var(--primary-v)'/>
+            rotate: String((flip+1)*90)+'deg'}} background='var(--primary-v)'/>
 
             <Icon img_url="icons/roadturn.svg"
             style={{width: props.lineHeight, height: props.lineHeight,
-            rotate: String((flip+3)*90)+'deg'}} background_color='var(--primary-v)'/>
+            rotate: String((flip+3)*90)+'deg'}} background='var(--primary-v)'/>
 
           </div>
           {/*Elements*/}
@@ -54,7 +53,7 @@ console.log(roadmap.length)
 
   roadmap.push(<div key={-1} style={{width:'100%', justifyContent:'center', display:'flex', transform: 'scale(' + ((flip==1) ? '-1' : '1') + ',-1)'}}>
     <Icon img_url="icons/roadcenter.svg"
-    style={{ height:props.lineHeight, width:doubleHeight, maskImage: 'linear-gradient(180deg, transparent 20% ,black 80%)'}} background_color='var(--primary-v)'/>
+    style={{ height:props.lineHeight, width:doubleHeight, maskImage: 'linear-gradient(180deg, transparent 20% ,black 80%)'}} background='var(--primary-v)'/>
   </div>)
   return roadmap;
 }

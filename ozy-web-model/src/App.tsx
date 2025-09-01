@@ -1,4 +1,3 @@
-
 import HomePage from './pages/Home.tsx';
 import ProjectsPage from './pages/Projects.tsx';
 import ContactsPage from './pages/Contacts.tsx';
@@ -37,7 +36,7 @@ function App() {
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
         </div>
-        <NavBar is_compact={compact} is_mobile={mobile}/>
+        <NavBar is_compact={compact} is_mobile={mobile} screen_width={width}/>
     </div>
   </Router>
 )}

@@ -3,11 +3,6 @@ import RoadMap from '../components/Roadmap';
 
 const roadmapCollege:React.ReactNode[] = [
   <div>
-    <h1 className="text-bg">2019</h1>
-    <h2>Scratch</h2>
-    <p>Découverte de scratch au collège en math.</p>
-  </div>,
-  <div>
     <h1 className="text-bg">2020</h1>
     <h2>Python</h2>
     <p>Stage d'une semaine d'innitiation au Python.</p>

@@ -1,40 +1,67 @@
-import Link from './Link';
+import { useEffect } from 'react';
+import Link from './BandLink';
 import Icon from './Icon';
+import {useLocation} from 'react-router-dom';
 
-function NavBar({ is_compact, is_mobile}:{is_compact:boolean, is_mobile:boolean}) {
-    const prefix:string = ""
+function BandLink({link_to, children, icon_url, display_icon} : {link_to: string; icon_url: string; children:React.ReactNode; display_icon: boolean}) {
+    const tab = useLocation();
+    let isActive = tab.pathname.startsWith(link_to);
+    if (link_to === "/") {
+        isActive = tab.pathname === "/"
+    }
 
     return (
-        <div className={"headband " + ((is_compact) ? "headband-compact" : "")}>
-            <div style={{ flexDirection: 'inherit', display:'flex', justifyContent: 'center', alignItems: 'inherit', width:'100%'}}>
-                <div style={{top:'-3.6px', position:'relative'}}>
-                
-                <Link link="/">
-                    {!is_compact && <Icon img_url="/icons/home.svg"
-                    style={{ width: "32px", height: "32px", zIndex: 150, top:'4px', position:'relative'}}background_color='var(--primary)'/>}
-                    <div style={{top:'4px', position:'relative'}}>
-                        {(is_mobile) ? <h2>Nikiel</h2> : <h2>Nikiel Patrick</h2>}
-                    </div>
-                </Link>
-                </div>
-                <Link link={`${prefix}/projects`}>
-                    <Icon img_url="/icons/projects.svg" style={{ width: "32px", height: "32px", zIndex: 150}} background_color='var(--primary)'/>
-                    {!is_compact && <h2>Projets</h2>}
-                </Link>
-                <Link link={`${prefix}/blogs`}>
-                    <Icon img_url="/icons/blogs.svg" style={{ width: "32px", height: "32px", zIndex: 150}} background_color='var(--primary)'/>
-                    {!is_compact && <h2>Blogs</h2>}
-                </Link>
-                <Link link={`${prefix}/contacts`}>
-                    <Icon img_url="/icons/contacts.svg" style={{ width: "32px", height: "32px", zIndex: 150}} background_color='var(--primary)'/>
-                    {!is_compact && <h2>Contacts</h2>}
-                </Link>
-                {/*<Link link="/hobbies">
-                    <Icon img_url="icons/hobbies.svg" style={{ width: "32px", height: "32px", zIndex: 150}} background_color='var(--primary)'/>
-                    {!is_compact && <h2>Hobbies</h2>}
-                </Link>*/}
+        <Link link={link_to}>
+            {display_icon &&
+            <Icon img_url={icon_url}
+            style={{ width: "32px", height: "32px", zIndex: 150}} background={((isActive) ? 'var(--primary-v)' : 'var(--primary)')}/>}
+            <div style={{fontWeight: (isActive) ? 'bold' : 'normal', fontSize:'32px'}}>
+                {children}
             </div>
-        </div>
+        </Link>
+    )
+}
+
+function NavBar({ is_compact, is_mobile, screen_width}:{is_compact:boolean, is_mobile:boolean, screen_width:number}) {
+    let has_scrollbar:boolean = document.documentElement.clientWidth < screen_width
+
+    useEffect(() => {
+        has_scrollbar = document.documentElement.clientWidth < screen_width
+    });
+    return (
+        <div className={"headband " + ((is_compact) ? "headband-compact" : "")} style={{width:(is_compact) ? screen_width : 'fit-content'}}>
+                <div style={{ flexDirection: 'inherit', display:'flex', justifyContent: 'center', alignItems: 'inherit'}}>
+                    <BandLink link_to='/' icon_url="/icons/home.svg" display_icon={!is_compact}>
+                        <div style={{width:(!is_mobile) ? '182px' : '78px'}} className={(useLocation().pathname === "/") ? "tab active" : "tab "}>
+                            {(is_mobile) ? <span>Nikiel</span> : <span>Nikiel Patrick</span>}
+                            <div className={(useLocation().pathname === "/") ? "underline active" : "underline "}>
+                                <div className={"anim"}></div>
+                            </div>
+                        </div>
+                    </BandLink>
+                    <BandLink link_to='/projects' icon_url="/icons/projects.svg" display_icon={true}>
+                        <div>
+                            {!is_compact && <div><span>Projects</span></div>}
+                        </div>
+                    </BandLink>
+
+                    <BandLink link_to='/blogs' icon_url="/icons/blogs.svg" display_icon={true}>
+                        <div>
+                            {!is_compact && <div><span>Blogs</span></div>}
+                        </div>
+                    </BandLink>
+                    <BandLink link_to='/contacts' icon_url="/icons/contacts.svg" display_icon={true}>
+                        <div>
+                            {!is_compact && <div><span>Contacts</span></div>}
+                        </div>
+                    </BandLink>
+                    
+                    {/*<Link link="/hobbies">
+                        <Icon img_url="icons/hobbies.svg" style={{ width: "32px", height: "32px", zIndex: 150}} background_color='var(--primary)'/>
+                        {!is_compact && <h2>Hobbies</h2>}
+                    </Link>*/}
+                </div>
+            </div>
     );
 }
 

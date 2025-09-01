@@ -17,7 +17,7 @@ function ScrollTopButton() {
     return (
         <button onClick={scrollToTop}
         className={"scroll-to-top" + ((visible) ? " smooth-show smooth-focus" : " smooth-hide smooth-unfocus")}>
-            <Icon img_url="/icons/arrowup.svg" style={{ width: "32px", height: "32px"}} background_color='var(--primary)'/>
+            <Icon img_url="/icons/arrowup.svg" style={{ width: "32px", height: "32px"}} background='var(--primary)'/>
         </button>
     );
 }
