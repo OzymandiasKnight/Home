@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Link from './BandLink';
 import Icon from './Icon';
 import {useLocation} from 'react-router-dom';
@@ -23,11 +22,6 @@ function BandLink({link_to, children, icon_url, display_icon} : {link_to: string
 }
 
 function NavBar({ is_compact, is_mobile, screen_width}:{is_compact:boolean, is_mobile:boolean, screen_width:number}) {
-    let has_scrollbar:boolean = document.documentElement.clientWidth < screen_width
-
-    useEffect(() => {
-        has_scrollbar = document.documentElement.clientWidth < screen_width
-    });
     return (
         <div className={"headband " + ((is_compact) ? "headband-compact" : "")} style={{width:(is_compact) ? screen_width : 'fit-content'}}>
                 <div style={{ flexDirection: 'inherit', display:'flex', justifyContent: 'center', alignItems: 'inherit'}}>
