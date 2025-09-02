@@ -1,6 +1,6 @@
 <markdown>
 <t>Mes concours de cybersécurité</t>
-<p>Je vais énoncer les différents challenges de mes concours de cybersécurité parmis ceux qui m'ont marqué.</p>
+<p>Je vais énoncer les différents challenges de mes concours de cybersécurité parmis ceux qui m'ont marqué et que je trouve intéressant de partager.</p>
 <space>
 <st>Mon tout premier concours</st>
 <space-s>
