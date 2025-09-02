@@ -12,7 +12,7 @@ function ImgToSvg({img_url, style, background}: ImgProps) {
       return `${prefix}${publicUrl}/${relative_path}`;
   }
   return (
-    <div style={style}>
+    <div style={style} className="icon">
         <div style={{
           backgroundColor: background,
           transition: 'background-color 0.25s',
@@ -20,6 +20,7 @@ function ImgToSvg({img_url, style, background}: ImgProps) {
           WebkitMaskBoxImageWidth: '100%',
           WebkitMaskSize: 'contain',
           width: `100%`, height: `100%`,
+          userSelect: 'none'
         }}>
         </div>
     </div>

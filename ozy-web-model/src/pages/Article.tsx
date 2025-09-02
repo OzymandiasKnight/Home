@@ -9,7 +9,6 @@ function ArticlePage() {
 
     const handleScroll = () => {
         let percent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-        console.log(percent);
         setPageScroll(percent);
     };
 
@@ -23,7 +22,7 @@ function ArticlePage() {
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <div style={{ width: '900px', minWidth: '300px' }}>
+            <div style={{ width: '900px', minWidth: '300px', height:'auto', objectFit:'contain'}}>
                 <MarkReader txt_path={link}/>
             </div>
             {percentBar}

@@ -4,6 +4,7 @@ import '../components.css'
 import '../App.css'
 import NotFoundPage from '../pages/NotFound';
 import LoadingScreen from './Loading';
+import Image from './Image'
 
 function make_bloc(content: String, key:number) {
   const lines = content.split('\n').slice(1, -1);
@@ -19,7 +20,7 @@ function make_bloc(content: String, key:number) {
   );
 }
 
-function parsePageFromMarks() {
+function parsePageFromMarks(blog_name_id:string) {
   let key = 0
   function parseMarks(text: string): React.ReactNode[] {
     const elements: React.ReactNode[] = []
@@ -30,7 +31,7 @@ function parsePageFromMarks() {
     const pRegex = /<p>(.*?)<\/p>/gs
     const codeRegex = /<code>(.*?)<\/code>/gs
     const blocRegex = /<bloc>(.*?)<\/bloc>/gs
-    const showcaseRegex = /<showcase img=([^\s>]+)>/g
+    const showcaseRegex = /<showcase img=(.*?)>/g
     const spaceRegex = /<space>/g
     const spaceSRegex = /<space-s>/g
     const hrRegex = /<hr>/g
@@ -65,6 +66,7 @@ function parsePageFromMarks() {
       return result
     }
 
+    
     if (markRegex.test(text)) {
       markRegex.lastIndex = 0
       return replaceAndParse(markRegex, () => {
@@ -108,7 +110,7 @@ function parsePageFromMarks() {
     if (showcaseRegex.test(text)) {
       showcaseRegex.lastIndex = 0
       return replaceAndParse(showcaseRegex, match => (
-        <img src={match[1]} alt="" key={key++} />
+        <Image src={"/showcases/" + blog_name_id + "/" + match[1]} alt="" style={{width:'100%', height:'auto'}} key={key++}></Image>
       ))
     }
     if (hrRegex.test(text)) {
@@ -132,8 +134,8 @@ function parsePageFromMarks() {
     if (bpRegex.test(text)) {
       bpRegex.lastIndex = 0
       return replaceAndParse(bpRegex, match => (
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <div className="bulletpoint" key={key++}></div>
+        <div style={{ display: 'flex', alignItems: 'center' }} key={key++}>
+          <div className="bulletpoint"></div>
           <p>{match[1]}</p>
         </div>
       ))
@@ -154,12 +156,13 @@ function parsePageFromMarks() {
 
 function Reader({ txt_path = 'Home/marks/self.txt' }) {
   const [content, setContent] = useState<React.ReactNode[]>([])
+  const blog_id:string = txt_path.split('/')[txt_path.split('/').length-1].split('.')[0]
  
 
   useEffect(() => {
     fetch(txt_path)
       .then(res => res.text())
-      .then(txt => setContent(parsePageFromMarks()(txt)))
+      .then(txt => setContent(parsePageFromMarks(blog_id)(txt)))
   }, [])
 
 

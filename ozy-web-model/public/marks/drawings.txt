@@ -1,0 +1,52 @@
+<markdown>
+<t>Mes dessins</t>
+
+<p>
+Même si l’informatique est ma passion principale, cela ne m’empêche pas d’en avoir d’autres.  
+Depuis l’enfance, j’ai toujours eu un goût prononcé pour l’art et le dessin.
+</p>
+
+<space-s>
+<p>Voici quelques-unes de mes créations :</p>
+<space-s>
+
+<p>Portrait du chanteur Michael Jackson</p>
+<p>réalisé dans le cadre d’un devoir d’arts plastiques au collège.</p>
+<showcase img=michael_jackson.jpg>
+
+<space>
+<p>
+Personnages du jeu  Call of Duty: Modern Warfare II : </p>
+<p>John Price (en haut) et Simon Riley alias "Ghost" (en bas).</p>
+<showcase img=cod.jpg>
+
+<space>
+<p>
+Walter White, alias "Heisenberg", de la série Breaking Bad, dans l’épisode Face Off.
+</p>
+<showcase img=heisenberg.jpg>
+
+<space>
+<p>
+Himeno, personnage du manga Chainsaw Man.
+</p>
+<showcase img=csm.jpg>
+
+<space>
+<p>Lisa, du manga Made In Abyss.</p>
+<p>J’ai utilisé plusieurs références de l’œuvre originale afin de reconstruire le personnage et la scène entièrement de zéro.</p>
+<showcase img=mia.jpg>
+
+<space>
+<p>
+Ville urbaine — mon tout premier essai de perspective "de tête", sans aucune référence.
+</p>
+<showcase img=urban.jpg>
+
+<space>
+<hr>
+<space>
+
+<p>
+J’espère que ces dessins vous ont plu et qu’ils vous auront permis de découvrir une autre facette de ma personnalité.
+</p>

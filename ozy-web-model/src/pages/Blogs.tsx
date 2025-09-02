@@ -10,7 +10,10 @@ function BlogsPage() {
                     <p>Mon système de blog personnalisé</p>
                 </Link>
                 <Link link={`${prefix}cybersecurity`}>
-                    <p>Ce que j'ai retenu de mes concours de cybersécurité</p>
+                    <p>Mes concours de cybersécurité</p>
+                </Link>
+                <Link link={`${prefix}drawings`}>
+                    <p>Ma passion pour les dessins</p>
                 </Link>
             </div>
         </div>

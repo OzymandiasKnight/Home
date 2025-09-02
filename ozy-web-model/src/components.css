@@ -1,10 +1,21 @@
 .card {
+    bottom: 0px;
     width: 100%;
     border-radius: 8px;
     padding: 8px;
     cursor: pointer;
     height: fit-content;
     position: relative;
+    transition: bottom 0.25s;
+}
+
+.card:hover {
+    bottom: 2px;
+    transition: bottom 0.25s;
+}
+
+*:focus-visible {
+    outline: 2px solid var(--secondary-v);
 }
 
 .card-solid {
@@ -43,6 +54,9 @@
 
 .link {
     position: relative;
+}
+
+.link > a > .link-content {
     padding: 4px;
 }
 
@@ -84,15 +98,23 @@
     opacity: 1;
 }
 
-.tab {
+a > .link-content > div > .tab {
     position: relative;
-    top: 4px;
+    top: 0px;
     white-space: nowrap;
-    transition: top 0.5s;
+    transition: top 0.2s;
 }
 
-.tab.active {
-    top: 0px;
+a > .link-content > div > .tab.active {
+    top: -2px;
+}
+
+a > .link-content > div > .tab:hover {
+    top: -2px;
+}
+
+a > .link-content > div > .tab:hover.active {
+    top: -2px;
 }
 
 .link-content {
@@ -142,12 +164,23 @@ a:hover > .underline > .anim {
     justify-content: center;
     flex-direction: row;
     height: fit-content;
-    align-items: end;
+    align-items: center;
 
 }
 
 .headband > div > .link {
-    padding: 8px;
+    padding: 2px;
+}
+
+.headband > div > .link > a > .link-content > .icon {
+    position: relative;
+    bottom: 0px;
+    transition: bottom 0.2s;
+}
+
+.headband > div > .link > a:hover > .link-content > .icon {
+    bottom: 2px;
+    transition: bottom 0.2s;
 }
 
 .scroll-to-top {

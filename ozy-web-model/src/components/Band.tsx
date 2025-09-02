@@ -14,7 +14,7 @@ function BandLink({link_to, children, icon_url, display_icon} : {link_to: string
             {display_icon &&
             <Icon img_url={icon_url}
             style={{ width: "32px", height: "32px", zIndex: 150}} background={((isActive) ? 'var(--primary-v)' : 'var(--primary)')}/>}
-            <div style={{fontWeight: (isActive) ? 'bold' : 'normal', fontSize:'32px'}}>
+            <div style={{fontWeight: (isActive) ? 'bold' : 'normal', fontSize:'32px', height:'40px'}}>
                 {children}
             </div>
         </Link>

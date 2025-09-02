@@ -7,7 +7,7 @@ function Image({ src, alt, style }: { src: string; alt: string; style: React.CSS
 
 
     return (<div className="img" style={style}>
-        <img src={make_path(src)} alt={alt} />
+        <img src={make_path(src)} alt={alt} style={{width:'inherit', height:'inherit'}}/>
     </div>);
 }
 
