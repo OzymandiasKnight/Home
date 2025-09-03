@@ -72,8 +72,9 @@ const roadmapEtudes:React.ReactNode[] = [
 
 function HomePage({is_mobile}: {is_mobile: boolean}) {
     useEffect(() => {
-      const elements = document.querySelectorAll<HTMLElement>(".road-content")
-      
+      const road_elements = document.querySelectorAll<HTMLElement>(".road-content")
+      const road_titles = document.querySelectorAll<HTMLElement>(".road-title")
+
       const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach( entry => {
           if (entry.isIntersecting) {
@@ -83,7 +84,8 @@ function HomePage({is_mobile}: {is_mobile: boolean}) {
         });
       }, { threshold:0.1});
 
-      elements.forEach(ele => observer.observe(ele));
+      road_elements.forEach(ele => observer.observe(ele));
+      road_titles.forEach(ele => observer.observe(ele));
 
       return () => observer.disconnect();
 
@@ -111,15 +113,15 @@ function HomePage({is_mobile}: {is_mobile: boolean}) {
             <h1>Mon parcours :</h1>
             <div className="space"></div>
             <div className="roadmap" style={{minWidth: '320px', width:'100%'}}>
-              <h1 style={{textAlign:'center'}}>Collège</h1>
+              <h1 style={{textAlign:'center'}} className="road-title">Collège</h1>
               <RoadMap list={roadmapCollege} lineHeight='160px' is_mobile={is_mobile}/>
-              <h1 style={{textAlign:'center'}}>Lycée</h1>
+              <h1 style={{textAlign:'center'}} className="road-title">Lycée</h1>
               <RoadMap list={roadmapLycee} lineHeight='160px' is_mobile={is_mobile}/>
               <div style={{textAlign:'center'}}>
                 <div style={{width:'100%', justifyContent:'center', display:'flex'}}>
                   <h1 className="text-bg" style={{}}>2025</h1>
                 </div>
-                <h1>Obtention du baccalauréat</h1>
+                <h1 className="road-title">Obtention du baccalauréat</h1>
                 <p>Mention bien avec 20/20 en NSI et 15/20 en mathématiques</p>
             </div>
             <RoadMap list={roadmapEtudes} lineHeight='160px' is_mobile={is_mobile}/>
@@ -128,7 +130,7 @@ function HomePage({is_mobile}: {is_mobile: boolean}) {
                 <div style={{width:'100%', justifyContent:'center', display:'flex'}}>
                   <h1 className="text-bg" style={{}}>2025</h1>
                 </div>
-                <h1>Rentrée à l'ESGI</h1>
+                <h1 className="road-title">Rentrée à l'ESGI</h1>
                 <p style={{display:'inherit'}}>Rentrée en septembre</p>
                 <p>Recherche d'alternance</p>
             </div>

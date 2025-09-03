@@ -21,6 +21,8 @@ function ProjectsPage() {
                         card_width="270px" card_height="300px" image="showcases/Artstation.png" link="https://ozymandiasknight.github.io/Artstation/"/>
                         <Card title="Photo Builder" description='Mini réseaux social permettant de comparer les frises chronologiques de ses amis'
                         card_width="270px" card_height="300px" image="showcases/PhotoBuilder.png" link="https://github.com/OzymandiasKnight/SocialTimelineBuilder"/>
+                        <Card title="Portfolio" description='Decouvrez le code de ce portfolio, lien GitHub'
+                        card_width="270px" card_height="300px" image="icons/logo.svg" link="https://github.com/OzymandiasKnight/Home"/>
                     </Grid>
                 </div>
             </div>

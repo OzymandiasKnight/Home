@@ -36,6 +36,7 @@
 .road-content {
     opacity: 0;
     transition: opacity 1.5s;
+    transition-delay: 0.2s;
 }
 
 .road-content.visible {
@@ -59,6 +60,17 @@
     pointer-events: none;
 }
 
+.road-title {
+    position: relative;
+    top: 0px;
+    scale: 0.9;
+    transition: scale 1s,top 1s;
+}
+
+.road-title.visible {
+    top: 4px;
+    scale: 1.0;
+}
 
 .link {
     position: relative;
