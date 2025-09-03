@@ -22,6 +22,7 @@ function BandLink({link_to, children, icon_url, display_icon} : {link_to: string
 }
 
 function NavBar({ is_compact, is_mobile, screen_width}:{is_compact:boolean, is_mobile:boolean, screen_width:number}) {
+    document.title = "Patrick Nikiel"
     return (
         <div className={"headband " + ((is_compact) ? "headband-compact" : "")} style={{width:(is_compact) ? screen_width : 'fit-content'}}>
                 <div style={{ flexDirection: 'inherit', display:'flex', justifyContent: 'center', alignItems: 'inherit'}}>

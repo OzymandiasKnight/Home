@@ -25,7 +25,7 @@ function parsePageFromMarks(blog_name_id:string) {
   function parseMarks(text: string): React.ReactNode[] {
     const elements: React.ReactNode[] = []
   
-    const markRegex = /<markdown>/g
+    const markRegex = /<markdown title=(.*?)>/g
     const tRegex = /<t>(.*?)<\/t>/g
     const stRegex = /<st>(.*?)<\/st>/g
     const pRegex = /<p>(.*?)<\/p>/gs
@@ -69,7 +69,8 @@ function parsePageFromMarks(blog_name_id:string) {
     
     if (markRegex.test(text)) {
       markRegex.lastIndex = 0
-      return replaceAndParse(markRegex, () => {
+      return replaceAndParse(markRegex, match => {
+        document.title = "Patrick Nikiel - " + match[1];
         return <div className="markdown" key={key++}></div>
       })
     }

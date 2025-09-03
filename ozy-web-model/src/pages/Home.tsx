@@ -1,5 +1,6 @@
 import Link from '../components/Link';
 import RoadMap from '../components/Roadmap';
+import Image from '../components/Image'
 
 const roadmapCollege:React.ReactNode[] = [
   <div>
@@ -69,11 +70,15 @@ const roadmapEtudes:React.ReactNode[] = [
 ]
 
 function HomePage({is_mobile}: {is_mobile: boolean}) {
+
     return (
       <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
         <div style={{display:'flex', justifyContent:'center', alignItems:'center',flexDirection:'column', minWidth:'320px', width:'100%', maxWidth:'900px'}}>
             <div style={{minWidth:'320px', overflowWrap:'break-word'}}>
-                <h1>Patrick Nikiel</h1>
+              <div style={{display:'flex', flexDirection:'row', gap:'0px', lineHeight:'64px', alignItems:'center'}}>
+                <Image src="icons/logo.svg" alt="logo" style={{width:'64px', height:'64px', zIndex:'1', paddingRight:'8px'}}></Image>
+                <h1 style={{width:'fit-content', maxWidth:'fit-content', display:'inline'}}>Patrick Nikiel</h1>
+              </div>
                 <div className="space-s"></div>
                 <h2>En recherche d'alternance dans l'informatique</h2>
                 <h2>De préférence dans le développement web ou la cybersécurité</h2>

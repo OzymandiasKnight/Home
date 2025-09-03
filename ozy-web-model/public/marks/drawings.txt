@@ -1,4 +1,4 @@
-<markdown>
+<markdown title=Dessins>
 <t>Mes dessins</t>
 
 <p>
