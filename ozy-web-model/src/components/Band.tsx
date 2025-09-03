@@ -4,6 +4,7 @@ import {useLocation} from 'react-router-dom';
 
 function BandLink({link_to, children, icon_url, display_icon} : {link_to: string; icon_url: string; children:React.ReactNode; display_icon: boolean}) {
     const tab = useLocation();
+    const cta:boolean = link_to === "/contacts"
     let isActive = tab.pathname.startsWith(link_to);
     if (link_to === "/") {
         isActive = tab.pathname === "/"
@@ -14,7 +15,7 @@ function BandLink({link_to, children, icon_url, display_icon} : {link_to: string
             {display_icon &&
             <Icon img_url={icon_url}
             style={{ width: "32px", height: "32px", zIndex: 150}} background={((isActive) ? 'var(--primary-v)' : 'var(--primary)')}/>}
-            <div style={{fontWeight: (isActive) ? 'bold' : 'normal', fontSize:'32px', height:'40px'}}>
+            <div style={{fontWeight: (isActive) ? 'bold' : 'normal', fontSize:'32px', height:(!cta) ? '40px' : '36px'}}>
                 {children}
             </div>
         </Link>
@@ -45,11 +46,15 @@ function NavBar({ is_compact, is_mobile, screen_width}:{is_compact:boolean, is_m
                             {!is_compact && <div><span>Blogs</span></div>}
                         </div>
                     </BandLink>
-                    <BandLink link_to='/contacts' icon_url="/icons/contacts.svg" display_icon={true}>
-                        <div>
-                            {!is_compact && <div><span>Contacts</span></div>}
+                    <div style={{paddingLeft:(!is_compact) ? '2px' : '0px'}}>
+                        <div style={{boxShadow: 'inset 0 0 0 2px var(--primary)', borderRadius:'8px', width: '170px'}}>
+                            <BandLink link_to='/contacts' icon_url="/icons/contacts.svg" display_icon={true}>
+                                <div>
+                                    <div style={{textAlign:'center', width:'125px'}}><span>Contacts</span></div>
+                                </div>
+                            </BandLink>
                         </div>
-                    </BandLink>
+                    </div>
                     
                     {/*<Link link="/hobbies">
                         <Icon img_url="icons/hobbies.svg" style={{ width: "32px", height: "32px", zIndex: 150}} background_color='var(--primary)'/>

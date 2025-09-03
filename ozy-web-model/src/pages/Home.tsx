@@ -1,6 +1,7 @@
 import Link from '../components/Link';
 import RoadMap from '../components/Roadmap';
 import Image from '../components/Image'
+import { useEffect } from 'react'
 
 const roadmapCollege:React.ReactNode[] = [
   <div>
@@ -70,6 +71,23 @@ const roadmapEtudes:React.ReactNode[] = [
 ]
 
 function HomePage({is_mobile}: {is_mobile: boolean}) {
+    useEffect(() => {
+      const elements = document.querySelectorAll<HTMLElement>(".road-content")
+      
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach( entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold:0.1});
+
+      elements.forEach(ele => observer.observe(ele));
+
+      return () => observer.disconnect();
+
+    });
 
     return (
       <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>

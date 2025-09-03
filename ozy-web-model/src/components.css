@@ -33,6 +33,14 @@
     padding-bottom: 0px;
 }
 
+.road-content {
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.road-content.visible {
+    opacity: 1;
+}
 
 .grid {
     position: relative;

@@ -25,7 +25,7 @@ function make_roadmap(props: RoadMapProps) {
     }
     roadmap.push(
       <div key={idx} style={{ justifyContent:'center', display:'flex'}}>
-        <div  style={{display: 'flex', flexDirection:(flip==2) ? 'row' : 'row-reverse', height:'fit-content', width: doubleHeight, alignItems:'center'}}>
+        <div style={{display: 'flex', flexDirection:(flip==2) ? 'row' : 'row-reverse', height:'fit-content', width: doubleHeight, alignItems:'center'}}>
           {/*Imgs*/}
           <div style={{width: '100%', display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'center'}}>
 
@@ -44,7 +44,7 @@ function make_roadmap(props: RoadMapProps) {
               {position:'relative', textAlign: (flip!=1) ?'left' : 'left',
               left: (props.is_mobile) ? '0%' : ((flip!=2) ? '100%' : '-100%'),
               float:'right'}
-            }>{item}</div>
+            } className="road-content">{item}</div>
           </div>
         </div>
       </div>
