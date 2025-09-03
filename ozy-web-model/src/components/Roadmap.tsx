@@ -4,6 +4,7 @@ interface RoadMapProps {
     lineHeight: string;
     list: React.ReactNode[];
     is_mobile: boolean;
+    
 }
 
 

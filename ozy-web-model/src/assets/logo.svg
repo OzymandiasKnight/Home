@@ -27,18 +27,109 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2.3853805"
-     inkscape:cx="133.94089"
-     inkscape:cy="185.7146"
+     inkscape:zoom="1.6867187"
+     inkscape:cx="130.13432"
+     inkscape:cy="217.58222"
      inkscape:window-width="1920"
      inkscape:window-height="1057"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer2"
-     showguides="false" />
+     inkscape:current-layer="layer1"
+     showguides="true" />
   <defs
      id="defs2">
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect1441"
+       is_visible="true"
+       lpeversion="1"
+       pattern="M 0,4.9921383 C 0,2.236478 2.236478,0 4.9921383,0 c 2.7556604,0 4.9921384,2.236478 4.9921384,4.9921383 0,2.7556604 -2.236478,4.9921384 -4.9921384,4.9921384 C 2.236478,9.9842767 0,7.7477987 0,4.9921383 Z"
+       copytype="single_stretched"
+       prop_scale="0.96783756"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1439"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="join_type"
+       id="path-effect702"
+       is_visible="true"
+       lpeversion="1"
+       linecap_type="butt"
+       line_width="7.5"
+       linejoin_type="extrp_arc"
+       miter_limit="100"
+       attempt_force_join="true" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect700"
+       is_visible="true"
+       lpeversion="1"
+       pattern="M 0,4.9921383 C 0,2.236478 2.236478,0 4.9921383,0 c 2.7556604,0 4.9921384,2.236478 4.9921384,4.9921383 0,2.7556604 -2.236478,4.9921384 -4.9921384,4.9921384 C 2.236478,9.9842767 0,7.7477987 0,4.9921383 Z"
+       copytype="single_stretched"
+       prop_scale="0.96783756"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect698"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect694"
+       is_visible="true"
+       lpeversion="1"
+       pattern="M 0,4.9921383 C 0,2.236478 2.236478,0 4.9921383,0 c 2.7556604,0 4.9921384,2.236478 4.9921384,4.9921383 0,2.7556604 -2.236478,4.9921384 -4.9921384,4.9921384 C 2.236478,9.9842767 0,7.7477987 0,4.9921383 Z"
+       copytype="single_stretched"
+       prop_scale="0.96783756"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect692"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
     <inkscape:path-effect
        effect="join_type"
        id="path-effect8479"
@@ -454,6 +545,11 @@
        method="bsplinespiro"
        linkedpaths="#path8477,0,1"
        id="path-effect8481" />
+    <inkscape:path-effect
+       effect="fill_between_many"
+       method="bsplinespiro"
+       linkedpaths="#path696,0,1"
+       id="path-effect704" />
   </defs>
   <g
      inkscape:groupmode="layer"
@@ -470,7 +566,7 @@
      inkscape:label="Logo"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="matrix(1.1666668,0,0,1.1666668,-8.333335,-8.3333349)">
+     transform="matrix(1.0447762,0,0,0.96773362,-2.2388051,1.6139256)">
     <path
        style="display:none;fill:#e0f2f1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.87816;stroke-linecap:round;stroke-miterlimit:100;paint-order:markers fill stroke"
        d="m 39.915347,15.343819 c -0.02184,11.441617 -0.04377,22.882739 -0.06578,34.324054 2.485285,2.64e-4 4.970382,2.64e-4 7.455442,-10e-7 C 44.841825,38.226557 42.378655,26.785435 39.915347,15.343819 Z"
@@ -493,19 +589,19 @@
        sodipodi:nodetypes="cccc" />
     <path
        style="display:inline;fill:#8185bb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.99999;stroke-linecap:round;stroke-miterlimit:100;paint-order:markers fill stroke"
-       d="m 39.98172,46.249996 -24.981725,-1e-6 a 3.75,3.75 0 0 0 -3.037526,5.949076 l 24.849572,34.324055 a 3.75,3.75 0 1 0 6.075052,-4.398152 l -24.849572,-34.324055 -3.037526,5.949076 24.981725,1e-6 a 3.75,3.75 0 1 0 0,-7.5 z"
+       d="M 47.91987,46.879808 15.777016,68.308376 a 3.75,3.75 0 0 0 0.183309,6.35509 L 37.95275,87.558951 a 3.75,3.75 0 1 0 3.793634,-6.469802 L 19.753959,68.193664 19.937268,74.548754 52.080122,53.120186 A 3.75,3.75 0 1 0 47.91987,46.879808 Z"
        id="path789-4"
        inkscape:path-effect="#path-effect795-4"
-       inkscape:original-d="m 39.98172,49.999996 -24.981725,-1e-6 24.849572,34.324055"
+       inkscape:original-d="M 49.999996,49.999997 17.857142,71.428565 39.849567,84.32405"
        inkscape:linked-fill="path799"
        sodipodi:nodetypes="ccc"
        inkscape:label="Bracket" />
     <path
        style="fill:#80cbc4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.99999;stroke-linecap:round;stroke-miterlimit:100;paint-order:markers fill stroke"
-       d="m 49.999996,53.749996 34.999999,-1e-6 a 3.75,3.75 0 0 0 3.0515,-5.929643 L 63.051494,12.820353 a 3.75,3.75 0 1 0 -6.103,4.359286 l 25.000001,34.999999 3.0515,-5.929643 -34.999999,1e-6 a 3.75,3.75 0 1 0 0,7.5 z"
+       d="M 52.080153,53.120163 84.223006,31.691123 A 3.75,3.75 0 0 0 84.102408,25.373671 L 61.959553,11.802711 a 3.75,3.75 0 1 0 -3.919118,6.39457 L 80.18329,31.76824 80.062692,25.450788 47.919839,46.879829 a 3.75,3.75 0 1 0 4.160314,6.240334 z"
        id="path789-4-0"
        inkscape:path-effect="#path-effect795-4-4"
-       inkscape:original-d="m 49.999996,49.999996 34.999999,-1e-6 -25.000001,-34.999999"
+       inkscape:original-d="M 49.999996,49.999996 82.142849,28.570956 59.999994,14.999996"
        inkscape:linked-fill="path799"
        sodipodi:nodetypes="ccc"
        inkscape:label="Bracket" />
@@ -525,12 +621,9 @@
        inkscape:linked-fill="path8483"
        class="UnoptimicedTransforms"
        sodipodi:nodetypes="cc" />
-    <rect
-       style="fill:#8185bb;fill-opacity:1;stroke-width:6.6404;stroke-linecap:round;stroke-miterlimit:100;paint-order:markers fill stroke"
-       id="rect3316"
-       width="18.005812"
-       height="7.500001"
-       x="25.744181"
-       y="46.249992" />
+    <path
+       style="fill:#e0f2f1;stroke:none;stroke-width:4.28571;stroke-linecap:round;stroke-miterlimit:100;paint-order:markers fill stroke"
+       d="m 40.072142,15.515531 c -0.02992,17.215799 -0.06005,34.431373 -0.09042,51.646717"
+       id="path690" />
   </g>
 </svg>

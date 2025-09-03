@@ -131,8 +131,8 @@ h1, h2, p {
   font-size: 96px;
   z-index: -1;
   user-select: none;
-  opacity: 1;
-  color: var(--secondary);
+  opacity: 0.35;
+  color: var(--secondary-v);
 }
 
 .bloc {
