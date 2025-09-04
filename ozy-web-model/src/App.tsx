@@ -7,10 +7,20 @@ import NavBar from './components/Band.tsx'
 import ScrollTopButton from './components/ScrollButton.tsx';
 import NotFoundPage from './pages/NotFound.tsx';
 
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import useWindowDimensions from './components/WindowInfos.tsx';
 
+function ResetScroll() {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    console.log("done")
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
+
+  return null;
+}
 
 
 
@@ -20,13 +30,14 @@ function App() {
   (height);
   let mobile:boolean = width<960;
   let compact:boolean = width<1500;
+
   return (
     <Router>
       <div>
+        <ResetScroll/>
         <ScrollTopButton />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <div style={{ padding: '24px', paddingTop:'80px', paddingBottom:'80px'}}>
-          
             <Routes>
               <Route path="/" element={<HomePage is_mobile={mobile} />} />
               <Route path="/projects" element={<ProjectsPage />} />

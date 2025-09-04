@@ -9,21 +9,21 @@ interface ProjectInfos {
 }
 
 const projects: ProjectInfos[] = [
-    {title:"Guide Python", description:'Guide pour débuter en Python',
-    image:"showcases/GuidePython.png",link:"https://ozymandiasknight.github.io/GuidePython/guide_bases.pdf"},
-    {title:"Blood War", description:'Jeu de plateforme multijoueur local en 2D',
-    image:"showcases/Bloodwar.png",link:"https://github.com/OzymandiasKnight/BloodWar"},
-    {title:"Slower Pace", description:'Plugin Minecraft augmentant la durée du jeu',
-    image:"showcases/SlowerPace.png",link:"https://github.com/OzymandiasKnight/SlowerPace"},
-    {title:"Work Nodes", description:'Logiciel de gestion de projet',
-    image:"showcases/WorkNodes.png", link:"https://github.com/OzymandiasKnight/ProjectManager"},
-    {title:"Art Station", description:'Site vitrine de présentation de mes créations 3D',
-    image:"showcases/Artstation.png", link:"https://ozymandiasknight.github.io/Artstation/"},
+    {title:"Portfolio" , description:'Decouvrez le code de ce portfolio, lien GitHub',
+    image:"icons/logo.svg", link:"https://github.com/OzymandiasKnight/Home"},
     {title:"Photo Builder",
     description:'Mini réseaux social permettant de comparer les frises chronologiques de ses amis',
     image:"showcases/PhotoBuilder.png", link:"https://github.com/OzymandiasKnight/SocialTimelineBuilder"},
-    {title:"Portfolio" , description:'Decouvrez le code de ce portfolio, lien GitHub',
-    image:"icons/logo.svg", link:"https://github.com/OzymandiasKnight/Home"}
+    {title:"Guide Python", description:'Guide pour débuter en Python',
+    image:"showcases/GuidePython.png",link:"https://ozymandiasknight.github.io/GuidePython/guide_bases.pdf"},
+    {title:"Work Nodes", description:'Logiciel de gestion de projet',
+    image:"showcases/WorkNodes.png", link:"https://github.com/OzymandiasKnight/ProjectManager"},
+    {title:"Blood War", description:'Jeu de plateforme multijoueur local en 2D',
+    image:"showcases/Bloodwar.png",link:"https://github.com/OzymandiasKnight/BloodWar"},
+    {title:"Art Station", description:'Site vitrine de présentation de mes créations 3D',
+    image:"showcases/Artstation.png", link:"https://ozymandiasknight.github.io/Artstation/"},
+    {title:"Slower Pace", description:'Plugin Minecraft augmentant la durée du jeu',
+    image:"showcases/SlowerPace.png",link:"https://github.com/OzymandiasKnight/SlowerPace"},
 ];
 
 function ProjectCard(infos:ProjectInfos,index:number) {
