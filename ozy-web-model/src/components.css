@@ -253,6 +253,22 @@ a:hover > .underline > .anim {
     z-index: 1000;
 }
 
+.project-show {
+    opacity: 0;
+    animation: reveal 0.75s forwards;
+}
+
+@keyframes reveal {
+    0% {
+        top: -5px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
 @keyframes loading {
     0% {
         rotate: 0deg;
