@@ -22,9 +22,6 @@ function ResetScroll() {
   return null;
 }
 
-
-
-
 function App() {
   const { height, width} = useWindowDimensions();
   (height);

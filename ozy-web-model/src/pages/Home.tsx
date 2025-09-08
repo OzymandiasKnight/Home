@@ -97,7 +97,9 @@ function HomePage({is_mobile}: {is_mobile: boolean}) {
             <div style={{minWidth:'320px', overflowWrap:'break-word'}}>
               <div style={{display:'flex', flexDirection:'row', gap:'0px', lineHeight:'64px', alignItems:'center'}}>
                 <Image src="icons/logo.svg" alt="logo" style={{width:'64px', height:'64px', zIndex:'1', paddingRight:'8px'}}></Image>
-                <h1 style={{width:'fit-content', maxWidth:'fit-content', display:'inline'}}>Patrick Nikiel</h1>
+                <div style={{height:'100%', width:'fit-content', display:'flex', justifyContent:'center', overflow:'hidden'}} className="name">
+                  <h1 style={{position:'relative',top:'0%',width:'fit-content', maxWidth:'fit-content', display:'inline'}}>Patrick Nikiel</h1>
+                </div>
               </div>
                 <div className="space-s"></div>
                 <h2>En recherche d'alternance dans l'informatique</h2>
@@ -105,7 +107,7 @@ function HomePage({is_mobile}: {is_mobile: boolean}) {
                 <div className="space-s"></div>
                 <p>Je suis un développeur passionné,</p>
                 <p>une alternance me permettrais de faire un premier pas dans</p>
-                <p>l'enseignement supérieur et dans le monde du travail</p>
+                <p>le monde du travail pendant que j'étudie</p>
             </div>
             <div className="space"></div>
             <div className="rule-h"></div>

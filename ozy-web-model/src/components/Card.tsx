@@ -1,6 +1,7 @@
 import '../components.css'
 import '../styles/Card.css';
 import Image from './Image';
+import Icon from './Icon';
 
 interface CardProps {
     card_height: string;
@@ -9,9 +10,11 @@ interface CardProps {
     description: string;
     image: string;
     link: string;
+    tags: string[];
+    tags_base: {name:string, image:string}[];
 }
 
-function Card({ card_width, card_height, title, description, image, link }: CardProps) {
+function Card({ card_width, card_height, title, description, image, link, tags, tags_base }: CardProps) {
 
     function go_to_link() {
         window.location.href = link;
@@ -30,6 +33,12 @@ function Card({ card_width, card_height, title, description, image, link }: Card
                 }>
                 <h2>{title}</h2>
                 <p>{description}</p>
+            </div>
+            <div style={{display:'flex', flexDirection:'row', position:'absolute', bottom:'8px', background:'var(--secondary)', padding:'4px', gap:'4px', borderRadius:'8px', margin:'4px'}}>
+                {tags.map((tag:string, i:number) => {
+                    let tech_icon: string = tags_base.find(tech => tech.name === tag)?.image ?? "";
+                    return <Icon key={i} style={{width:'32px', height:'32px'}} img_url={tech_icon} background='var(--secondary-v)'></Icon>
+                })}
             </div>
         </div>
     );
