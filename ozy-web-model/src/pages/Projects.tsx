@@ -88,10 +88,8 @@ function SoftwareList(software_list:SoftwareInfos[]) {
         <>
         {software_list.map((item:SoftwareInfos, index:number) => (
             <div key={index} style={
-                {display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'center',
-                background:'var(--primary)', animationDelay:`${String(index*0.1)}s`,
-                padding:'8px', borderRadius:'16px', width:'100%', height:'30px', gap:'8px'}
-            } className="tag-show">
+                {animationDelay:`${String(index*0.1)}s`}} 
+                className="tag-show tag">
                 <Icon img_url={item.image}
                 style={{width:'32px', height:'32px', backgroundRepeat:'no-repeat', background:"var(--secondary-v)", padding:'4px', borderRadius:'8px'}}
                 background="var(--secondary)"/>
@@ -106,11 +104,7 @@ function TechList(tech_list:TechInfos[]) {
     return (
         <>
         {tech_list.map((item:TechInfos, index:number) => (
-            <div key={index} style={
-                {display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'center',
-                background:'var(--primary)', animationDelay:`${String(index*0.1+1)}s`,
-                padding:'8px', borderRadius:'16px', width:'100%', height:'30px', gap:'8px'}
-            } className="tag-show">
+            <div key={index} style={{animationDelay:`${String(index*0.1+1)}s`}} className="tag-show tag">
                 <Icon img_url={item.image}
                 style={{width:'32px', height:'32px', backgroundRepeat:'no-repeat', background:"var(--secondary-v)", padding:'4px', borderRadius:'8px'}}
                 background="var(--secondary)"/>
@@ -131,18 +125,18 @@ function ProjectsPage() {
                 <h2>Les logiciels que je maîtrise</h2>
                 <div className="space-s"></div>
                 <div style={{minWidth:'320px', width:'100%', maxWidth:'900px', display: 'flex', justifyContent: 'center'}}>
-                    <Grid size="170px">
+                    <div style={{display:'flex', flexWrap:'wrap', gap:'16px'}}>
                         {SoftwareList(softwares)}
-                    </Grid> 
+                    </div> 
                 </div>
                 <div className="space-s"></div>
                 <div className="space-s"></div>
                 <h2>Mon stack technique</h2>
                 <div className="space-s"></div>
                 <div style={{minWidth:'320px', width:'100%', maxWidth:'900px', display: 'flex', justifyContent: 'center'}}>
-                    <Grid size="170px">
+                    <div style={{display:'flex', flexWrap:'wrap', gap:'16px'}}>
                         {TechList(techs)}
-                    </Grid> 
+                    </div> 
                 </div>
                 <div className="space-s"></div>
                 <div className="space-s"></div>

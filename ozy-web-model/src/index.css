@@ -16,8 +16,10 @@
   --space-dis: 6px;
   --space-rel: 4px;
 
+
   --shadow-l: #0000001F 0px 2px 4px 4px;
   --shadow-m: #0000001F 0px 4px 6px 0px;
+  --shadow-v-m: #0000001F 0px 4px 6px 0px;
 
 }
 

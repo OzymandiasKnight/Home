@@ -7,6 +7,7 @@
     height: fit-content;
     position: relative;
     transition: bottom 0.25s;
+    box-shadow: var(--shadow-m);
 }
 
 .card:hover {
@@ -78,6 +79,8 @@
 
 .link > a > .link-content {
     padding: 4px;
+    
+
 }
 
 .link > a {
@@ -102,6 +105,7 @@
     width: 100%;
     background-color: var(--primary);
     overflow: hidden;
+    box-shadow: var(--shadow-v-l);
 }
 
 .tab > .underline {
@@ -256,6 +260,19 @@ a:hover > .underline > .anim {
 .project-show {
     opacity: 0;
     animation: reveal 0.75s forwards;
+}
+
+.tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    background: var(--primary);
+    padding: 8px;
+    border-radius: 16px;
+    width: fit-content;
+    height: 30px;
+    gap: 8px ;
 }
 
 .tag-show {

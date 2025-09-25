@@ -8,6 +8,9 @@ function ContactsPage() {
                     <h1>Mes contacts</h1>
                     <div className="space"></div>
                     <h2>CV&nbsp;:</h2>
+                    <Link link="/Home/files/NikielAlternanceATS.pdf" is_nav={true}>
+                        <p>Télécharger mon CV ATS</p>
+                    </Link>
                     <Link link="/Home/files/NikielAlternanceDeveloppeur.pdf" is_nav={true}>
                         <p>Télécharger mon CV</p>
                     </Link>

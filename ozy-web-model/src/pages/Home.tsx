@@ -61,7 +61,7 @@ const roadmapLycee:React.ReactNode[] = [
   </div>
 ]
 
-const roadmapEtudes:React.ReactNode[] = [
+const roadmapVacances:React.ReactNode[] = [
 <div>
   <h1 className="text-bg"></h1>
   <h2>Java Spring Boot & Vue.js</h2>
@@ -69,6 +69,14 @@ const roadmapEtudes:React.ReactNode[] = [
 </div>,
 
 ]
+
+const roadmapEtudes:React.ReactNode[] = [
+<div>
+  <h2>Programmation C</h2>
+  <p>Apprentissage des bases de la programmation en C.</p>
+</div>
+]
+
 
 function HomePage({is_mobile}: {is_mobile: boolean}) {
     useEffect(() => {
@@ -106,9 +114,12 @@ function HomePage({is_mobile}: {is_mobile: boolean}) {
                 <h2>De préférence dans le développement web ou la cybersécurité</h2>
                 <div className="space-s"></div>
                 <p>Je suis un développeur passionné,</p>
-                <p>une alternance me permettrais de faire un premier pas dans</p>
-                <p>le monde du travail pendant que j'étudie</p>
+                <p>une alternance me permettrais de découvrir, le monde du travail pendant que j'étudie</p>
             </div>
+            <div className="space-s"></div>
+            <Link link="/Home/files/NikielAlternanceDeveloppeur.pdf" is_nav={true}>
+              <p>Télécharger mon CV</p>
+            </Link>
             <div className="space"></div>
             <div className="rule-h"></div>
             <div className="space-s"></div>
@@ -118,7 +129,7 @@ function HomePage({is_mobile}: {is_mobile: boolean}) {
               <h1 style={{textAlign:'center'}} className="road-title">Collège</h1>
               <RoadMap list={roadmapCollege} lineHeight='160px' is_mobile={is_mobile}/>
               <h1 style={{textAlign:'center'}} className="road-title">Lycée</h1>
-              <RoadMap list={roadmapLycee} lineHeight='160px' is_mobile={is_mobile}/>
+              <RoadMap list={roadmapLycee} lineHeight='160px' is_mobile={is_mobile} is_flip={true}/>
               <div style={{textAlign:'center'}}>
                 <div style={{width:'100%', justifyContent:'center', display:'flex'}}>
                   <h1 className="text-bg" style={{}}>2025</h1>
@@ -126,7 +137,7 @@ function HomePage({is_mobile}: {is_mobile: boolean}) {
                 <h1 className="road-title">Obtention du baccalauréat</h1>
                 <p>Mention bien avec 20/20 en NSI et 15/20 en mathématiques</p>
             </div>
-            <RoadMap list={roadmapEtudes} lineHeight='160px' is_mobile={is_mobile}/>
+            <RoadMap list={roadmapVacances} lineHeight='160px' is_mobile={is_mobile}/>
             </div>
             <div style={{textAlign:'center'}}>
                 <div style={{width:'100%', justifyContent:'center', display:'flex'}}>
@@ -136,6 +147,7 @@ function HomePage({is_mobile}: {is_mobile: boolean}) {
                 <p style={{display:'inherit'}}>Rentrée en septembre</p>
                 <p>Recherche d'alternance</p>
             </div>
+            <RoadMap list={roadmapEtudes} is_flip={true} lineHeight='160px' is_mobile={is_mobile}/>
             <div className="space"></div>
             <Link link="/projects">
             <h2>Decouvrez mes projets</h2>

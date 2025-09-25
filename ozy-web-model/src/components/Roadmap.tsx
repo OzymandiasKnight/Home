@@ -4,6 +4,7 @@ interface RoadMapProps {
     lineHeight: string;
     list: React.ReactNode[];
     is_mobile: boolean;
+    is_flip?: boolean;
     
 }
 
@@ -13,10 +14,10 @@ function make_roadmap(props: RoadMapProps) {
   let heightValue:string = String(props.lineHeight.substring(heightNumber.length));
   let doubleHeight:string = String(parseInt(heightNumber)*2) + heightValue;
   const roadmap:React.ReactNode[] = []
-  let flip:number = 0;
+  let flip:number = (props.is_flip) ? 1 : 0;
   roadmap.push(<div key={-2} style={{justifyContent:'center', display:'flex'}}>
     <Icon img_url="icons/roadcenter.svg"
-    style={{ height:props.lineHeight, width:doubleHeight, maskImage: 'linear-gradient(180deg, transparent 20% ,black 80%)'}} background='var(--primary-v)'/>
+    style={{ height:props.lineHeight, width:doubleHeight, maskImage: 'linear-gradient(180deg, transparent 20% ,black 80%)', transform: "scaleX(" + ((flip) ? "-1" : "1") + ")"}} background='var(--primary-v)'/>
   </div>)
 
   props.list.forEach((item,idx) => {

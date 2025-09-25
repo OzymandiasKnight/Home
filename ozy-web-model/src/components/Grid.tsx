@@ -1,6 +1,6 @@
 function Grid({children, size}: {children: React.ReactNode, size: string}) {
     return (
-        <div className="grid" style={{gridTemplateColumns: `repeat(auto-fit, minmax(${size}, 1fr))`, justifyItems: 'center'}}>
+        <div className="grid" style={{gridTemplateColumns: `repeat(auto-fit, minmax(${size}, auto))`, justifyItems: 'center'}}>
             {children}
         </div>
     );
